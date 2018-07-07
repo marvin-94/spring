@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+    <bean id="compactDisc" class="com.marvin.spring.soundsystem_xml.CompactDiscImpl"/>
+    -->
+    <!-- 使用构造器注入类，1.construction
+    <bean id="cDPlayer" class="com.marvin.spring.soundsystem_xml.CDPlayer">
+        <constructor-arg ref="compactDisc"/>
+    </bean>
+    -->
+
+    <!-- 使用构造器注入类，2.c标签
+    <bean id="cDPlayer" class="com.marvin.spring.soundsystem_xml.CDPlayer" c:_0-ref="compactDisc"/>
+    -->
+
+    <!-- 使用构造器注入字面量 1.constructor
+    <bean id="compactDisc" class="com.marvin.spring.soundsystem_xml.MyCompactDisc">
+        <constructor-arg value="zhoujielun"/>
+        <constructor-arg value="qilixiang"/>
+    </bean>
+    -->
+
+    <!-- 使用构造器注入字面量，2.c标签
+    <bean id="compactDisc2" class="com.marvin.spring.soundsystem_xml.MyCompactDisc" c:_0="zhoujielun" c:_1="qilixiang"/>
+    -->
+    
+    <!-- 构造器可以使用<list> 、<set> ，但是c标签不支持集合 -->
+    
+    <!-- 使用setter注入  1.property
+    <bean id="cDPlayer" class="com.marvin.spring.soundsystem_xml.CDPlayer">
+        <property name="disc" ref="compactDisc"/>
+    </bean>
+    -->
+
+    <!-- 使用setter注入  2.p标签
+    <bean id="cDPlayer" class="com.marvin.spring.soundsystem_xml.CDPlayer" p:disc-ref="compactDisc"/>
+    -->
+</beans>
