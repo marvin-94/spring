@@ -3,7 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="spring2-loadBean" target="1.7" />
+      <module name="spring3-aop" target="1.8" />
       <module name="spring3-seniorLoadBean" target="1.7" />
+      <module name="spring4-aop" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

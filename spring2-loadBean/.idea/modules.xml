@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring2-loadBean.iml" filepath="$PROJECT_DIR$/spring2-loadBean.iml" />
       <module fileurl="file://$PROJECT_DIR$/../spring3-seniorLoadBean/spring3-seniorLoadBean.iml" filepath="$PROJECT_DIR$/../spring3-seniorLoadBean/spring3-seniorLoadBean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring4-aop/spring4-aop.iml" filepath="$PROJECT_DIR$/../spring4-aop/spring4-aop.iml" />
     </modules>
   </component>
 </project>

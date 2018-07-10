@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring3-aop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../spring3-seniorLoadBean" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring4-aop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring4-aop" charset="UTF-8" />
   </component>
 </project>
