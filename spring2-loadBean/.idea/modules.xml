@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/spring2-loadBean.iml" filepath="$PROJECT_DIR$/spring2-loadBean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../spring3-seniorLoadBean/spring3-seniorLoadBean.iml" filepath="$PROJECT_DIR$/../spring3-seniorLoadBean/spring3-seniorLoadBean.iml" />
     </modules>
   </component>
 </project>
