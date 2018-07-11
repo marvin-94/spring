@@ -13,7 +13,23 @@ public class PerformanceTest {
     Performance performance;
 
     @Test
-    public void testPerformance(){
+    public void testPerformance() {
         performance.perform();
+    }
+
+    @Test
+    public void testSong() {
+        performance.song("七里香");
+    }
+
+    @Test
+    public void testSayInfo() {
+        performance.sayInfo("李狗蛋", 20);
+    }
+
+    @Test
+    public void testPlay() {
+        Play ss = (PlayImpl) performance;
+        ss.play();
     }
 }

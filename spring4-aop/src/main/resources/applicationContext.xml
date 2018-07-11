@@ -11,5 +11,26 @@
         -->
 
         <!--<aop:aspectj-autoproxy/>  开启aop自动代理-->
+        <!--xml配置 aop
+        <bean id="environment" class="com.marvin.spring.demo.JjPerformance"/>
+        <bean id="audience" class="com.marvin.spring.demo.Audience"/>
+        <aop:config>
+                <aop:pointcut id="pointcut1" expression="execution(* com.marvin.spring.demo.Performance.perform(..))"/>
+                <aop:pointcut id="pointcut2" expression="execution(* com.marvin.spring.demo.Performance.song(String)) and args(abc)"/>
+
+                <aop:aspect ref="audience">
+                        <aop:before method="sitDown" pointcut="execution(* com.marvin.spring.demo.Performance.perform(..))"/>
+                        <aop:before method="closePhone" pointcut="execution(* com.marvin.spring.demo.Performance.perform(..))"/>
+                        <aop:after-returning method="success" pointcut-ref="pointcut1"/>
+                        <aop:around method="around" pointcut-ref="pointcut1"/>
+                        <aop:before method="song" pointcut-ref="pointcut2"/>
+                </aop:aspect>
+
+                <aop:aspect>
+                        <aop:declare-parents types-matching="com.marvin.spring.demo.Performance+" implement-interface="com.marvin.spring.demo.Play"
+                                             default-impl="com.marvin.spring.demo.PlayImpl"/>
+                </aop:aspect>
+        </aop:config>
+        -->
 
 </beans>

@@ -5,4 +5,8 @@ package com.marvin.spring.demo;
  */
 public interface Performance {
     void perform();
+
+    void sayInfo(String name,int age);
+
+    void song(String song);
 }

@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.*;
 /**
  * 观众-切面
  */
-@Aspect//声明这是一个切面类
+//@Aspect//声明这是一个切面类
 public class Audience {
 
     @Pointcut("execution(* com.marvin.spring.demo.Performance.perform(..))")//将多次使用的切点抽出来
@@ -46,6 +46,25 @@ public class Audience {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
+    }
 
+    @Pointcut("execution(* com.marvin.spring.demo.Performance.song(String)) " +
+            "&& args(asd2)")//获取被切入对象的参数， 此处参数名字和下面参数名字对应即可，无需与被切入对象一致
+    public void cutPoint2(String asd2) {
+    }
+
+    @Before("cutPoint2(abc)")
+    public void song(String abc) {
+        System.out.println("获取到参数" + abc);
+    }
+
+    @Pointcut("execution(* com.marvin.spring.demo.Performance.sayInfo(String,int)) " +
+            "&& args(asd3,age)")//获取被切入对象的参数,多个按顺序填写， 此处参数名字和下面参数名字对应即可，无需与被切入对象一致
+    public void cutPoint3(String asd3, int age) {
+    }
+
+    @Before("cutPoint3(name,age)")
+    public void say(String name, int age) {
+        System.out.println("获取到参数" + name + "---" + age);
     }
 }
