@@ -6,7 +6,7 @@
 
     <groupId>com.marvin.spring</groupId>
     <artifactId>spring3-seniorLoadBean</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
     <name>spring3-seniorLoadBean</name>

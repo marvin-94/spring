@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring2-loadBean" />
+        <module name="spring3-seniorLoadBean" />
+        <module name="spring4-aop" />
+        <module name="spring5-mvc" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring2-loadBean" target="1.7" />
       <module name="spring3-aop" target="1.8" />
       <module name="spring3-seniorLoadBean" target="1.7" />
       <module name="spring4-aop" target="1.7" />
+      <module name="spring5-mvc" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
