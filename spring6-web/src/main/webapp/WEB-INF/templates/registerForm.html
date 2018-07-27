@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/resources/css/register.css}">
+</head>
+<body>
+
+<form method="post" th:object="${spitter}">
+    <div class="error" th:if="${#fields.hasErrors('*')}">
+        <ul>
+            <li th:each="item:${#fields.errors('*')}"
+                th:text="${item}">错误信息
+            </li>
+        </ul>
+    </div>
+    <label th:class="${#fields.hasErrors('firstName')}?'error'">First Name:</label>
+    <input type="text" th:field="*{firstName}" th:class="${#fields.hasErrors('firstName')}?'error'"/><br/>
+
+    <label th:class="${#fields.hasErrors('lastName')}?'error'">Last Name:</label>
+    <input type="text" th:field="*{lastName}" th:class="${#fields.hasErrors('lastName')}?'error'"/><br/>
+
+    <label th:class="${#fields.hasErrors('email')}?'error'">Email:</label>
+    <input type="text" th:field="*{email}" th:class="${#fields.hasErrors('email')}?'error'"/><br/>
+
+    <label th:class="${#fields.hasErrors('username')}?'error'">Username:</label>
+    <input type="text" th:field="*{username}" th:class="${#fields.hasErrors('username')}?'error'"/><br/>
+
+    <label th:class="${#fields.hasErrors('password')}?'error'">Password:</label>
+    <input type="text" th:field="*{password}" th:class="${#fields.hasErrors('password')}?'error'"/><br/>
+
+    <input type="submit" value="Register">
+</form>
+</body>
+</html>
