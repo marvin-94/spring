@@ -4,12 +4,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-/**
- * spring容器配置文件
- */
 @Configuration
-//Controller已经在mvc中注册，此处不需要重复注册，
-@ComponentScan(basePackages = {"com.marvin.spring"}, excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, value = {Controller.class})})
+@ComponentScan(basePackages = {"com.marvin.spring"}, excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION, classes = {Controller.class, EnableWebMvc.class})})
 public class RootConfig {
+
 }

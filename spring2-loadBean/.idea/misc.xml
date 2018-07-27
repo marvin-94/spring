@@ -2,6 +2,8 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/../spring5-mvc" />
+    <file type="web" url="file://$PROJECT_DIR$/../spring6-web" />
+    <file type="web" url="file://$PROJECT_DIR$/../spring7-seniorMvc" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -10,6 +12,8 @@
         <option value="$PROJECT_DIR$/../spring3-seniorLoadBean/pom.xml" />
         <option value="$PROJECT_DIR$/../spring4-aop/pom.xml" />
         <option value="$PROJECT_DIR$/../spring5-mvc/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring6-web/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring7-seniorMvc/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

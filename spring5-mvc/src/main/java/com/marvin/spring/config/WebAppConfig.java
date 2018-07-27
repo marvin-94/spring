@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
@@ -17,8 +17,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @Configuration
 @EnableWebMvc//开启注解驱动的mvc
 @ComponentScan(basePackageClasses = {WebScan.class})
-//继承WebMvcConfigurerAdapter是为了处理静态资源不被dispatcherServlet处理
-public class WebAppConfig extends WebMvcConfigurerAdapter {
+//继承WebMvcConfigurerAdapter是为了处理静态资源不被dispatcherServlet处理，已经过时，可以使用WebMvcConfigurationSupport
+public class WebAppConfig implements WebMvcConfigurer {
     //注册视图解析器
     @Bean
     public ViewResolver viewResolver() {
@@ -34,4 +34,5 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
+
 }
